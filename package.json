@@ -16,7 +16,7 @@
     "lerna": "lerna",
     "dev": "lerna run start --stream --parallel",
     "build": "lerna run build",
-    "start:app": "yarn run build && yarn --cwd packages/formik link && yarn --cwd ./app link formik && yarn --cwd ./app && yarn --cwd ./app run start",
+    "start:app": "yarn run build && yarn --cwd packages/formik link && yarn --cwd ./app/node_modules/react link && yarn --cwd packages/formik link react && yarn --cwd ./app link formik  && yarn --cwd ./app && yarn --cwd ./app run start",
     "format": "prettier --write 'packages/*/src/**/*' 'packages/*/test/**/*' 'README.md'",
     "precommit": "lint-staged"
   },
